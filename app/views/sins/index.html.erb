@@ -1,2 +1,12 @@
-<h1>Sins#index</h1>
-<p>Find me in app/views/sins/index.html.erb</p>
+<h1>Sins</h1>
+
+<ul>
+
+ <% @sins.each do |sin|%>
+    <li>
+     <h2> <%= link_to sin.title, sin %></h2>
+    </li>
+ <% end %>
+
+</ul>
+<%= link_to "New Sin", new_sin_path %>

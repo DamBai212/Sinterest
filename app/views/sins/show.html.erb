@@ -1,2 +1,9 @@
-<h1>Sins#show</h1>
-<p>Find me in app/views/sins/show.html.erb</p>
+<h1><%= @sin.title %></h1>
+
+<p><%= @sin.description %></p>
+
+<%= link_to "Back", root_path %>
+
+<%= link_to "Edit", edit_sin_path%>
+
+<%= link_to "Delete", sin_path, method: :delete, data: {confirm: "Are you sure?" } %>
