@@ -1,3 +1,9 @@
+body {
+ margin-top: 100px;
+}
+
+
+
 nav {
   .navbar-header {
     width: 100%;
@@ -12,13 +18,17 @@ nav {
     }
   }
 }
-view raw
+
 
 
 .navbar-default, .navbar-toggle:focus, .collapsed, button.navbar-toggle {
   background: $navbarColor !important ;
   border: none;
-  a {
-    color: white !important;
-  }
+  // a {
+    // color: white !important;
+  // }
+}
+
+.nav.navbar-nav > li > a, .navbar-brand {
+  color: white !important;
 }

@@ -1,4 +1,8 @@
-<h3> <%= @category.name %></h3>
-<% @category.sins.each do |sin| %>
-<li> <%= sin.name %> </li>
-<% end %>
+<div class="row">
+   <h3> <%= @category.name %></h3>
+      <% @category.sins.each do |sin| %>
+       <li> 
+         <%= link_to sin.title, sin %> 
+        </li>
+    <% end %>
+</div>

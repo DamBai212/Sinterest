@@ -16,7 +16,6 @@ class SinsController < ApplicationController
 
   def create
    @sin = Sin.new(sin_params)
-   @sin.category_id = params[:category_id]
     if @sin.save
       flash[:success] = "Successfully created new Sin"
 			redirect_to @sin
@@ -30,7 +29,6 @@ class SinsController < ApplicationController
   end
 
   def update
-    @sin.category_id = params[:category_id]
     if @sin.update(sin_params)
        flash[:success] = "Sin Successfully updated!"
       redirect_to @sin

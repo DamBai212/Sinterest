@@ -30,10 +30,10 @@ def seed_sins
   categories = Category.all
 
   categories.each do |category|
-    5.times do
+    30.times do
       Sin.create(
-        title: Faker::Bank.title, 
-        description: Faker::Sin.description, 
+        title: Faker::Dessert.flavor, 
+        description: Faker::Dessert.topping, 
         # user_id: rand(1..9), 
         category_id: category.id
       )

@@ -1,0 +1,29 @@
+// Place all the styles related to the sins controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.single-sin-card {
+  min-height: 135px;
+  max-height: 135px;
+  box-shadow: 1px 1px 4px rgba(0,0,0, 0.3);
+  color: black;
+  padding: 10px;
+  text-align: left;
+  transition: border 0.1s, background 0.5s;
+  .sin-text {
+    overflow: hidden;
+  }
+  a, a:active, a:hover {
+    color: black;
+  }
+  &:hover {
+    cursor: pointer;
+    background: white;
+    box-shadow: none;
+    border-radius: 1%;
+  }
+}
+
+.sin-content {
+  display: none;
+}
+
