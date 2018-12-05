@@ -4,11 +4,11 @@
 
  <% @sins.each do |sin|%>
     <li>
-     <h2> <%= link_to sin.category.name, category_path(sin.category) %></h2>
+     <h2> <%= link_to sin.title, sin_path(sin) %></h2>
     </li>
  <% end %>
 
 </ul>
-<%= link_to "New Sin", new_sin_path %>
+
 
 
