@@ -16,19 +16,24 @@ class SinsController < ApplicationController
 
   def create
    @sin = Sin.new(sin_params)
+   @sin.category_id = params[:category_id]
     if @sin.save
-			redirect_to @sin, notice: "Successfully created new Pin"
+      flash[:success] = "Successfully created new Sin"
+			redirect_to @sin
 		else
 			render 'new'
 		end
   end
 
   def edit
+
   end
 
   def update
+    @sin.category_id = params[:category_id]
     if @sin.update(sin_params)
-      redirect_to @sin, ntotice: "Sin Successfully updated!"
+       flash[:success] = "Sin Successfully updated!"
+      redirect_to @sin
     else
       render 'edit'
     end
@@ -42,7 +47,7 @@ class SinsController < ApplicationController
   private 
 
   def sin_params
-    params.require(:sin).permit(:title, :description)
+    params.require(:sin).permit(:title, :description, :category_id)
   end
 
   def set_sin

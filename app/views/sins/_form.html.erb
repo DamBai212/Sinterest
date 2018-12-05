@@ -1,9 +1,24 @@
 <%= form_for @sin do |f| %>
+
+<% if @sin.errors.any? %>
+     <div>
+          <p><%= pluralize(@sin.errors.count, "error") %> prevented it from being saved.</p>
+          <ul>
+               <% @sin.errors.full_messages.each do |msg| %>
+               <li><%= msg %></li>
+               <% end %>
+          </ul> 
+     </div>
+<% end %>
+
+
 <%= f.label :title %>: 
 <%= f.text_field :title %><br>
 <%= f.label :description %>: 
 <%= f.text_field :description %><br>
-
-
+<%= f.label :category %>:
+<%= f.collection_select:category_id, Category.all, :id, :name, prompt: true %><br>
 <%= f.submit %>
+
 <% end %>
+
