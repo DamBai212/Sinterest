@@ -5,6 +5,7 @@
  <% @sins.each do |sin|%>
     <li>
      <h2> <%= link_to sin.title, sin_path(sin) %></h2>
+     <%= image_tag sin.image_url.to_s %>
     </li>
  <% end %>
 
