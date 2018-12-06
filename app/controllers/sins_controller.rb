@@ -45,7 +45,7 @@ class SinsController < ApplicationController
   private 
 
   def sin_params
-    params.require(:sin).permit(:title, :description, :category_id)
+    params.require(:sin).permit(:title, :description, :category_id, :image)
   end
 
   def set_sin

@@ -35,7 +35,7 @@ gem 'jquery-rails'
 gem 'paperclip', '~> 6.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'carrierwave'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
