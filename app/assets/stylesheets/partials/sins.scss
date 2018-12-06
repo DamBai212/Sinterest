@@ -27,3 +27,21 @@
   display: none;
 }
 
+
+.solid-color-mode, .border-color-mode {
+  .sin-text {
+    text-align: center;
+  }
+}
+
+.solid-color-mode {
+  .sin-text {
+    padding: 10px;
+    background-color: white;
+    border-radius: 25px;
+  }
+}
+
+.border-color-mode {
+  background-color: white;
+}

@@ -1,4 +1,7 @@
+<%= render 'layouts/navigation', categories: @categories %>
 <h1><%= @sin.title %></h1>
+     
+<%= image_tag @sin.image_url.to_s %>
 
 <p><%= @sin.description %></p>
 

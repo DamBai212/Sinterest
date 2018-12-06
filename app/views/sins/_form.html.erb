@@ -1,4 +1,6 @@
-<%= form_for @sin do |f| %>
+<%= render 'layouts/navigation', categories: @categories %>
+
+<%= form_for @sin, html: { multipart: true } do |f| %>
 
 <% if @sin.errors.any? %>
      <div>
@@ -14,6 +16,8 @@
 
 <%= f.label :title %>: 
 <%= f.text_field :title %><br>
+<%= f.label :image %><br>
+<%= f.file_field :image %>
 <%= f.label :description %>: 
 <%= f.text_field :description %><br>
 <%= f.label :category %>:

@@ -13,10 +13,7 @@
       <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
       <% end %>
-
-      <%= render 'layouts/navigation', categories: @categories %>
-
-    
+          
 
     <% if flash[:errors] %>
       <% flash[:errors].each do |e| %>
@@ -40,7 +37,6 @@
     <% if flash[:authorized] %>
      <p> <%= flash[:authorized] %> </p>
     <% end %>
-
 
     <%= yield %>
   </body>

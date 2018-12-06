@@ -1,3 +1,4 @@
+<%= render 'layouts/navigation', categories: @categories %>
 <div class="row">
    <h3> <%= @category.name %></h3>
       <% @category.sins.each do |sin| %>
