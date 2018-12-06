@@ -1,3 +1,5 @@
+<%= render 'layouts/navigation', categories: @categories %>
+
 <%= form_for @sin, html: { multipart: true } do |f| %>
 
 <% if @sin.errors.any? %>
