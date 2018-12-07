@@ -6,6 +6,24 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# User.destroy_all
+# Category.destroy_all
+# Sin.destroy_all
+
+def seed_users
+  user_id = 0
+  10.times do 
+    User.create(
+      name: "test#{user_id}",
+     
+      password: '123456',
+      password_confirmation: '123456'
+    )
+    user_id = user_id + 1
+  end
+end
+
+
 def seed_categories
   hobby = ['Arts', 'Crafts', 'Sports', 'Sciences', 'Collecting', 'Reading', 'Other']
   study = ['Arts and Humanities', 'Physical Science and Engineering', 'Math and Logic',
@@ -34,12 +52,13 @@ def seed_sins
       Sin.create(
         title: Faker::Dessert.flavor, 
         description: Faker::Dessert.topping, 
-        # user_id: rand(1..9), 
+        user_id: rand(1..9), 
         category_id: category.id
       )
     end
   end
 end
 
+seed_users
 seed_categories
 seed_sins
