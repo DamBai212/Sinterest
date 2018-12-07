@@ -5,7 +5,7 @@
         <%= truncate(sin.title, :length => 60) %>
       </h4>
       <div class="sin-content">
-        <%# <div class="posted-by">Posted by <%= post.user.name %>
+        <div class="sined-by">Sined by <%= sin.user.name %></div>
         <h3><%= sin.title %></h3> 
         <p><%= sin.description %></p>
         <%= link_to "I'm interested", sin_path(sin.id), class: 'interested' %>
