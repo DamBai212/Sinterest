@@ -4,7 +4,7 @@ class SinsController < ApplicationController
 
 
   def index
-    @sins = Sin.all.order("created_at DESC")
+    @sins = Sin.search(params[:term])
   end
 
   def show
@@ -29,7 +29,9 @@ class SinsController < ApplicationController
   end
 
   def update
+    # byebug
     if @sin.update(sin_params)
+      
        flash[:success] = "Sin Successfully updated!"
       redirect_to @sin
     else
@@ -45,7 +47,7 @@ class SinsController < ApplicationController
   private 
 
   def sin_params
-    params.require(:sin).permit(:title, :description, :category_id, :image)
+    params.require(:sin).permit(:title, :description, :category_id, :image, :term)
   end
 
   def set_sin
